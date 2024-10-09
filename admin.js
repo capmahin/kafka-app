@@ -21,4 +21,6 @@ async function Infinity() {
     ]
   });
   console.log(" Topic Created Success [rider-updates]");
+
+  await admin.disconnect();
 }
