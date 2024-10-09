@@ -7,4 +7,7 @@ const kafka = new Kafka({
 
 async function Infinity() {
   const admin = kafka.admin();
+  console.log("Admin connecting...");
+  admin.connect();
+  console.log("Admin Connection Success....");
 }
