@@ -11,5 +11,12 @@ async function Infinity() {
   admin.connect();
   console.log("Admin Connection Success....");
 
-  admin.createTopics({});
+  await admin.createTopics({
+    topics: [
+      {
+        topic: "rider-updates",
+        numPartitions: 2
+      }
+    ]
+  });
 }
