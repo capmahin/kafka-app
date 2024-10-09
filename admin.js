@@ -10,4 +10,6 @@ async function Infinity() {
   console.log("Admin connecting...");
   admin.connect();
   console.log("Admin Connection Success....");
+
+  admin.createTopics({});
 }
