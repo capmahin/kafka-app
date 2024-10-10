@@ -31,9 +31,9 @@ async function init() {
         }
       ]
     });
+  }).on("close", async () => {
+    await producer.disconnect();
   });
-
-  await producer.disconnect();
 }
 
 init();
