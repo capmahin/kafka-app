@@ -11,6 +11,7 @@ async function init() {
     topic: "rider-updates",
     messages: [
       {
+        partition: 0,
         key: "location-update",
         value: JSON.stringify({
           name: "Tony Stark",
