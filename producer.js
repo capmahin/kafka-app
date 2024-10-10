@@ -15,9 +15,13 @@ async function init() {
         key: "location-update",
         value: JSON.stringify({
           name: "Tony Stark",
-          loc: "Hyderabad"
+          loc: "SOUTH"
         })
       }
     ]
   });
+
+  await producer.disconnect();
 }
+
+init();
