@@ -7,6 +7,10 @@ async function init() {
   await consumer.subscribe({ topics: ["rider-updates"] });
 
   await consumer.run({
-    eachMessage: async({ topic, partition, message, heartbeat, pause })
+    eachMessage: async ({ topic, partition, message, heartbeat, pause }) => {
+      console.log(`[${topic}: PART:${partition}: ${message.toString()}]`);
+    }
   });
+
+  await consumer.disconnect();
 }
