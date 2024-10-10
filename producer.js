@@ -8,6 +8,7 @@ async function init() {
   console.log("Producer Connected Successfully");
 
   await producer.send({
-    topic: ""
+    topic: "rider-updates",
+    messages: [{ key: "name", value: "Tony Stark" }]
   });
 }
