@@ -5,4 +5,9 @@ async function init() {
 
   console.log("Connecting Producer");
   await producer.connect();
+  console.log("Producer Connected Successfully");
+
+  await producer.send({
+    topic: ""
+  });
 }
