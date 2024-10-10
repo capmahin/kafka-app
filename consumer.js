@@ -5,4 +5,8 @@ async function init() {
   await consumer.connect();
 
   await consumer.subscribe({ topics: ["rider-updates"] });
+
+  await consumer.run({
+    eachMessage: async({ topic, partition, message, heartbeat, pause })
+  });
 }
