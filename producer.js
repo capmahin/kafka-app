@@ -9,6 +9,14 @@ async function init() {
 
   await producer.send({
     topic: "rider-updates",
-    messages: [{ key: "name", value: "Tony Stark" }]
+    messages: [
+      {
+        key: "location-update",
+        value: JSON.stringify({
+          name: "Tony Stark",
+          loc: "Hyderabad"
+        })
+      }
+    ]
   });
 }
